@@ -1,6 +1,8 @@
 Node BitTorrent Sync
 ====================
 
+[![NPM version](https://badge.fury.io/js/bittorrent-sync.png)](https://npmjs.org/package/bittorrent-sync) [![Dependency Status](https://gemnasium.com/yannickcr/node-bittorrent-sync.png)](https://gemnasium.com/yannickcr/node-bittorrent-sync) [![Code Climate](https://codeclimate.com/github/yannickcr/node-bittorrent-sync.png)](https://codeclimate.com/github/yannickcr/node-bittorrent-sync)
+
 A simple wrapper for the BitTorrent Sync API.
 
 # Installation
@@ -13,10 +15,10 @@ A simple wrapper for the BitTorrent Sync API.
 var BTSync = require('bittorrent-sync');
 
 var btsync = new BTSync({
-	host: 'localhost',
-	port: 8888,
-	username: 'myusername',
-	password: 'mypassword'
+  host: 'localhost',
+  port: 8888,
+  username: 'myusername',
+  password: 'mypassword'
 });
 
 btsync.getFolders(function(err, data) {
@@ -50,3 +52,5 @@ Full API documentation can be found on the [BitTorrent Sync Website](http://www.
 # License
 
 Node BitTorrent Sync is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yannickcr/node-bittorrent-sync/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
