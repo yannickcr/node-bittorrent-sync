@@ -1,0 +1,32 @@
+{
+  "name": "bittorrent-sync",
+  "version": "0.0.0",
+  "description": "A simple wrapper for the BitTorrent Sync API",
+  "keywords": [
+    "bittorrent",
+    "btsync",
+    "api",
+    "p2p",
+    "peer2peer"
+  ],
+  "homepage": "https://github.com/yannickcr/node-bittorrent-sync",
+  "main": "./lib/bittorrent-sync.js",
+  "dependencies": {
+    "request": "~2.27.0"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/yannickcr/node-bittorrent-sync/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yannickcr/node-bittorrent-sync.git"
+  },
+  "author": "Yannick Croissant (https://github.com/yannickcr)",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/yannickcr/node-bittorrent-sync/master/LICENSE"
+    }
+  ]
+}
