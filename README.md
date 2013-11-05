@@ -14,7 +14,9 @@ var BTSync = require('bittorrent-sync');
 
 var btsync = new BTSync({
 	host: 'localhost',
-	port: 8888
+	port: 8888,
+	username: 'myusername',
+	password: 'mypassword'
 });
 
 btsync.getFolders(function(err, data) {
@@ -23,7 +25,27 @@ btsync.getFolders(function(err, data) {
 });
 ```
 
-API documentation can be found on the [BitTorrent Sync Website](http://www.bittorrent.com/intl/en/sync/developers/api)
+# Available methods
+
+ * `getFolders`
+ * `addFolder`
+ * `removeFolder`
+ * `getFiles`
+ * `setFilePrefs`
+ * `getFolderPeers`
+ * `getSecrets`
+ * `getFolderPrefs`
+ * `setFolderPrefs`
+ * `getFolderHosts`
+ * `setFolderHosts`
+ * `getPrefs`
+ * `setPrefs`
+ * `getOs`
+ * `getVersion`
+ * `getSpeed`
+ * `shutdown`
+
+Full API documentation can be found on the [BitTorrent Sync Website](http://www.bittorrent.com/intl/en/sync/developers/api)
 
 # License
 
