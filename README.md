@@ -3,7 +3,7 @@ Node BitTorrent Sync
 
 [![NPM version](https://badge.fury.io/js/bittorrent-sync.png)](https://npmjs.org/package/bittorrent-sync) [![Dependency Status](https://gemnasium.com/yannickcr/node-bittorrent-sync.png)](https://gemnasium.com/yannickcr/node-bittorrent-sync) [![Code Climate](https://codeclimate.com/github/yannickcr/node-bittorrent-sync.png)](https://codeclimate.com/github/yannickcr/node-bittorrent-sync)
 
-A simple wrapper for the BitTorrent Sync API.
+A simple wrapper for the [BitTorrent Sync API](http://www.bittorrent.com/intl/en/sync/developers/api).
 
 # Installation
 
@@ -24,6 +24,13 @@ var btsync = new BTSync({
 btsync.getFolders(function(err, data) {
   if (err) throw err;
   console.log(data);
+});
+
+btsync.addFolder(
+  {dir: '/btsync/data/folder1'},
+  function(err, data) {
+    if (err) throw err;
+    console.log(data);
 });
 ```
 
