@@ -11,10 +11,29 @@
   ],
   "homepage": "https://github.com/yannickcr/node-bittorrent-sync",
   "main": "./lib/bittorrent-sync.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "blanket": {
+      "pattern": [
+        "/lib/bittorrent-sync.js"
+      ]
+    }
+  },
   "dependencies": {
     "request": "~2.27.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "mocha-lcov-reporter": "~0.0.1",
+    "blanket": "~1.1.5",
+    "coveralls": "~2.3.0",
+    "nock": "~0.23.0",
+    "chai": "~1.8.1",
+    "chai-json-schema": "~1.0.5"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
   "bugs": {
     "url": "https://github.com/yannickcr/node-bittorrent-sync/issues"
   },
