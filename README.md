@@ -1,7 +1,7 @@
 Node BitTorrent Sync
 ====================
 
-[![NPM version](https://badge.fury.io/js/bittorrent-sync.png)](https://npmjs.org/package/bittorrent-sync) [![Dependency Status](https://gemnasium.com/yannickcr/node-bittorrent-sync.png)](https://gemnasium.com/yannickcr/node-bittorrent-sync) [![Code Climate](https://codeclimate.com/github/yannickcr/node-bittorrent-sync.png)](https://codeclimate.com/github/yannickcr/node-bittorrent-sync)
+[![NPM version](https://badge.fury.io/js/bittorrent-sync.png)](https://npmjs.org/package/bittorrent-sync) [![Build Status](https://secure.travis-ci.org/yannickcr/node-bittorrent-sync.png)](http://travis-ci.org/yannickcr/node-bittorrent-sync) [![Dependency Status](https://gemnasium.com/yannickcr/node-bittorrent-sync.png)](https://gemnasium.com/yannickcr/node-bittorrent-sync) [![Coverage Status](https://coveralls.io/repos/yannickcr/node-bittorrent-sync/badge.png?branch=master)](https://coveralls.io/r/yannickcr/node-bittorrent-sync?branch=master) [![Code Climate](https://codeclimate.com/github/yannickcr/node-bittorrent-sync.png)](https://codeclimate.com/github/yannickcr/node-bittorrent-sync)
 
 A simple wrapper for the [BitTorrent Sync API](http://www.bittorrent.com/intl/en/sync/developers/api).
 
