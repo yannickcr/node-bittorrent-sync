@@ -55,7 +55,7 @@ describe('getFiles', function() {
   before(function (done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files&secret=UNKNOWN')
-      .replyWithFile(200, __dirname + '/mock/empty-response.json');
+      .reply(200, '[]');
     done();
   });
 
@@ -90,7 +90,7 @@ describe('getFiles', function() {
   before(function (done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files&path=UNKNOWN&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
-      .replyWithFile(200, __dirname + '/mock/empty-response.json');
+      .reply(200, '[]');
     done();
   });
 

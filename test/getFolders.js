@@ -54,7 +54,7 @@ describe('getFolders', function() {
   before(function (done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folders&secret=UNKNOWN')
-      .replyWithFile(200, __dirname + '/mock/empty-response.json');
+      .reply(200, '[]');
     done();
   });
 
