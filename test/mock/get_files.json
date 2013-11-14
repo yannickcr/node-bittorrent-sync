@@ -1,0 +1,12 @@
+[{
+  "name": "node_modules",
+  "state": "created",
+  "type": "folder"
+}, {
+  "have_pieces": 1,
+  "name": "app.js",
+  "size": 918,
+  "state": "created",
+  "total_pieces": 1,
+  "type": "file"
+}]
