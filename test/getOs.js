@@ -27,7 +27,7 @@ describe('getOs', function() {
     done();
   });
 
-  it('must get OS informations', function(done) {
+  it('must return OS informations', function(done) {
     btsync.getOs(function(err, result) {
       if (err) {
         assert.fail(err, null);

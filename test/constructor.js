@@ -12,7 +12,7 @@ describe('constructor', function() {
 
     var btsync = new BtSync();
 
-    it('must create a Btsync instance', function() {
+    it('must create a BtSync instance', function() {
       expect(btsync).to.be.an.instanceof(BtSync);
     });
 
@@ -35,7 +35,7 @@ describe('constructor', function() {
       password: 'mypassword'
     });
 
-    it('must create a Btsync instance', function() {
+    it('must create a BtSync instance', function() {
       expect(btsync).to.be.an.instanceof(BtSync);
     });
 

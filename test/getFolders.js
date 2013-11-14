@@ -5,7 +5,6 @@ var
   nock             = require('nock'),
   chai             = require('chai'),
   expect           = chai.expect,
-  assert           = chai.assert,
   chaiJSONSchema   = require('chai-json-schema'),
   getFoldersSchema = require(path.join(__dirname, 'schema/getFolders.js')),
   BtSync           = require('../lib/bittorrent-sync')
@@ -27,13 +26,9 @@ describe('getFolders', function() {
     done();
   });
 
-  it('must get informations for all folders', function(done) {
+  it('must return informations for all folders', function(done) {
     btsync.getFolders(function(err, result) {
-      if (err) {
-        assert.fail(err, null);
-        return done();
-      }
-
+      expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(getFoldersSchema);
       return done();
     });
@@ -46,15 +41,11 @@ describe('getFolders', function() {
     done();
   });
 
-  it('must get informations for one folder', function(done) {
+  it('must return informations for one folder', function(done) {
     btsync.getFolders({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
-      if (err) {
-        assert.fail(err, null);
-        return done();
-      }
-
+      expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(getFoldersSchema);
       return done();
     });
@@ -71,11 +62,7 @@ describe('getFolders', function() {
     btsync.getFolders({
       secret: 'UNKNOWN'
     }, function(err, result) {
-      if (err) {
-        assert.fail(err, null);
-        return done();
-      }
-
+      expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(getFoldersSchema);
       return done();
     });
