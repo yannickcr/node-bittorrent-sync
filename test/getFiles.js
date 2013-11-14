@@ -42,7 +42,7 @@ describe('getFiles', function() {
     done();
   });
 
-  it('must return a files list', function(done) {
+  it('must return a file list', function(done) {
     btsync.getFiles({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -76,7 +76,7 @@ describe('getFiles', function() {
     done();
   });
 
-  it('must return a files list for the specified path', function(done) {
+  it('must return a file list for the specified path', function(done) {
     btsync.getFiles({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       path  : 'node_modules'

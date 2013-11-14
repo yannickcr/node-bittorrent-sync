@@ -11,6 +11,9 @@ var schema = {
       error: {
         type: 'number'
       },
+      files: {
+        type: 'number'
+      },
       indexing: {
         type: 'number'
       },
