@@ -24,8 +24,7 @@ var schema = {
       total_pieces: {
         type: 'number'
       }
-    },
-    required: ['name', 'state', 'type']
+    }
   }
 };
 
