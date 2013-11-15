@@ -5,7 +5,6 @@ var
   nock           = require('nock'),
   chai           = require('chai'),
   expect         = chai.expect,
-  assert         = chai.assert,
   chaiJSONSchema = require('chai-json-schema'),
   getOsSchema    = require(path.join(__dirname, 'schema/getOs.js')),
   BtSync         = require('../lib/bittorrent-sync')
@@ -29,11 +28,7 @@ describe('getOs', function() {
 
   it('must return OS informations', function(done) {
     btsync.getOs(function(err, result) {
-      if (err) {
-        assert.fail(err, null);
-        return done();
-      }
-
+      expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(getOsSchema);
       return done();
     });
