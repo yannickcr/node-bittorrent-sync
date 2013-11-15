@@ -1,0 +1,9 @@
+{
+  "search_lan": 1,
+  "selective_sync": 0,
+  "use_dht": 0,
+  "use_hosts": 1,
+  "use_relay_server": 1,
+  "use_sync_trash": 1,
+  "use_tracker": 1
+}
