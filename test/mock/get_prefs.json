@@ -1,0 +1,19 @@
+{
+  "device_name": "MyNAS",
+  "disk_low_priority": 1,
+  "download_limit": 0,
+  "folder_rescan_interval": "600",
+  "lan_encrypt_data": 1,
+  "lan_use_tcp": 0,
+  "lang": 28261,
+  "listening_port": 27279,
+  "max_file_size_diff_for_patching": "1000",
+  "max_file_size_for_versioning": "1000",
+  "rate_limit_local_peers": 0,
+  "recv_buf_size": "5",
+  "send_buf_size": "5",
+  "sync_max_time_diff": "600",
+  "sync_trash_ttl": "30",
+  "upload_limit": 0,
+  "use_upnp": 1
+}
