@@ -22,6 +22,7 @@ describe('constructor', function() {
       expect(btsync.options.port).to.equal(8888);
       expect(btsync.options.username).to.equal('api');
       expect(btsync.options.password).to.equal('secret');
+      expect(btsync.options.timeout).to.equal(10000);
     });
 
   });
@@ -32,7 +33,8 @@ describe('constructor', function() {
       host    : '192.168.0.1',
       port    : 8080,
       username: 'myusername',
-      password: 'mypassword'
+      password: 'mypassword',
+      timeout : 5000
     });
 
     it('must create a BtSync instance', function() {
@@ -45,6 +47,7 @@ describe('constructor', function() {
       expect(btsync.options.port).to.equal(8080);
       expect(btsync.options.username).to.equal('myusername');
       expect(btsync.options.password).to.equal('mypassword');
+      expect(btsync.options.timeout).to.equal(5000);
     });
 
   });
