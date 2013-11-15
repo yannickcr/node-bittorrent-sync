@@ -7,7 +7,6 @@ var
   expect         = chai.expect,
   chaiJSONSchema = require('chai-json-schema'),
   setPrefsSchema = require(path.join(__dirname, 'schema/getPrefs.js')),
-  errorSchema    = require(path.join(__dirname, 'schema/error.js')),
   BtSync         = require('../lib/bittorrent-sync')
 ;
 
