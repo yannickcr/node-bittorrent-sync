@@ -94,7 +94,7 @@ describe('addFolder', function() {
     done();
   });
 
-  it('must return a successful response', function(done) {
+  it('must return a successful response if everything is ok', function(done) {
     btsync.addFolder({
       dir: '/myFiles'
     }, function(err, result) {
