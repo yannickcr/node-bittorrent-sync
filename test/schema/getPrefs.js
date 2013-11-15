@@ -64,7 +64,7 @@ var schema = {
     'lan_encrypt_data',             'lan_use_tcp', 'lang',    'listening_port', 'max_file_size_diff_for_patching',
     'max_file_size_for_versioning', 'rate_limit_local_peers', 'recv_buf_size',  'send_buf_size',
     'sync_max_time_diff',           'sync_trash_ttl',         'upload_limit',   'use_upnp'
-  ],
+  ]
 };
 
 module.exports = schema;
