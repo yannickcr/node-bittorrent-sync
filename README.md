@@ -18,7 +18,8 @@ var btsync = new BTSync({
   host: 'localhost',
   port: 8888,
   username: 'myusername',
-  password: 'mypassword'
+  password: 'mypassword',
+  timeout: 10000
 });
 
 btsync.getFolders(function(err, data) {
@@ -26,9 +27,9 @@ btsync.getFolders(function(err, data) {
   console.log(data);
 });
 
-btsync.addFolder(
-  {dir: '/btsync/data/folder1'},
-  function(err, data) {
+btsync.addFolder({
+  dir: '/btsync/data/folder1'
+}, function(err, data) {
     if (err) throw err;
     console.log(data);
 });
