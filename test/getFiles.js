@@ -30,6 +30,7 @@ describe('getFiles', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.getFiles(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('getFiles', function() {
     done();
   });
 
-  it('must return a file list', function(done) {
+  it('must return the file list for the specified folder', function(done) {
     btsync.getFiles({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -59,7 +60,7 @@ describe('getFiles', function() {
     done();
   });
 
-  it('must return an empty list for an unknown folder', function(done) {
+  it('must return an empty list if the specified folder is unknown', function(done) {
     btsync.getFiles({
       secret: 'UNKNOWN'
     }, function(err, result) {
@@ -76,7 +77,7 @@ describe('getFiles', function() {
     done();
   });
 
-  it('must return a file list for the specified path', function(done) {
+  it('must return the file list for path in the specified folder', function(done) {
     btsync.getFiles({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       path  : 'node_modules'
@@ -94,7 +95,7 @@ describe('getFiles', function() {
     done();
   });
 
-  it('must return an empty list for an unknown path', function(done) {
+  it('must return an empty list if the specified path is unknown', function(done) {
     btsync.getFiles({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       path  : 'UNKNOWN'

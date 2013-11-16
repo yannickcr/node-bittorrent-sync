@@ -30,6 +30,7 @@ describe('setFolderHosts', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.setFolderHosts(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('setFolderHosts', function() {
     done();
   });
 
-  it('must return the preferences for one folder', function(done) {
+  it('must return the host list for the specified folder', function(done) {
     btsync.setFolderHosts({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       hosts: '192.168.0.10:41610'
@@ -60,7 +61,7 @@ describe('setFolderHosts', function() {
     done();
   });
 
-  it('must return an empty object', function(done) {
+  it('must return an empty object if the specified folder is unknown', function(done) {
     btsync.setFolderHosts({
       secret: 'UNKNOWN',
       hosts: '192.168.0.10:41610'

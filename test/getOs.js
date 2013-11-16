@@ -26,7 +26,7 @@ describe('getOs', function() {
     done();
   });
 
-  it('must return OS informations', function(done) {
+  it('must return the OS informations', function(done) {
     btsync.getOs(function(err, result) {
       expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(getOsSchema);

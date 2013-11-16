@@ -30,6 +30,7 @@ describe('getFolderPeers', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.getFolderPeers(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('getFolderPeers', function() {
     done();
   });
 
-  it('must return a peer list for one folder', function(done) {
+  it('must return the peer list for the specified folder', function(done) {
     btsync.getFolderPeers({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -59,7 +60,7 @@ describe('getFolderPeers', function() {
     done();
   });
 
-  it('must return an empty list', function(done) {
+  it('must return an empty list if the specified folder is unknown', function(done) {
     btsync.getFolderPeers({
       secret: 'UNKNOWN'
     }, function(err, result) {

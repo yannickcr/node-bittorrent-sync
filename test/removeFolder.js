@@ -30,6 +30,7 @@ describe('removeFolder', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.removeFolder(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('removeFolder', function() {
     done();
   });
 
-  it('must return an error if there\'s no folder with specified secret', function(done) {
+  it('must return an error if the specified secret is invalid', function(done) {
     btsync.removeFolder({
       secret: 'UNKNOWN'
     }, function(err, result) {
@@ -59,7 +60,7 @@ describe('removeFolder', function() {
     done();
   });
 
-  it('must return a successful response', function(done) {
+  it('must return a successful response if everything is ok', function(done) {
     btsync.removeFolder({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {

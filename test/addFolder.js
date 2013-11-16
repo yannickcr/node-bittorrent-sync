@@ -30,6 +30,7 @@ describe('addFolder', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.addFolder(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });

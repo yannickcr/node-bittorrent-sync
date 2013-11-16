@@ -30,6 +30,7 @@ describe('setFilePrefs', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.setFilePrefs(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('setFilePrefs', function() {
     done();
   });
 
-  it('must return an array with an empty object', function(done) {
+  it('must return an array with an empty object if there is no specified path', function(done) {
     btsync.setFilePrefs({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -59,7 +60,7 @@ describe('setFilePrefs', function() {
     done();
   });
 
-  it('must return an array with an empty object', function(done) {
+  it('must return an array with an empty object if the specified path is unknown', function(done) {
     btsync.setFilePrefs({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       path  : 'UNKNOWN',
@@ -77,7 +78,7 @@ describe('setFilePrefs', function() {
     done();
   });
 
-  it('must return a file list', function(done) {
+  it('must return the preferences for the specified path', function(done) {
     btsync.setFilePrefs({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       path  : 'app.js',
@@ -95,7 +96,7 @@ describe('setFilePrefs', function() {
     done();
   });
 
-  it('must return a file list', function(done) {
+  it('must return the updated preferences for the specified path', function(done) {
     btsync.setFilePrefs({
       secret  : 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2',
       path    : 'app.js',

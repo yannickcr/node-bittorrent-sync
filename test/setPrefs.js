@@ -26,7 +26,7 @@ describe('setPrefs', function() {
     done();
   });
 
-  it('must return BitTorrent Sync preferences', function(done) {
+  it('must return the preferences for BitTorrent Sync', function(done) {
     btsync.setPrefs(function(err, result) {
       expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(setPrefsSchema);
@@ -41,7 +41,7 @@ describe('setPrefs', function() {
     done();
   });
 
-  it('must return the updated BitTorrent Sync preferences', function(done) {
+  it('must return the updated preferences for BitTorrent Sync', function(done) {
     btsync.setPrefs({
       device_name: 'TheNAS'
     }, function(err, result) {

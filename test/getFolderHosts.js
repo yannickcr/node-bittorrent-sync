@@ -29,6 +29,7 @@ describe('getFolderHosts', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.getFolderHosts(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(getFolderHostsSchema);
       return done();
     });
@@ -41,7 +42,7 @@ describe('getFolderHosts', function() {
     done();
   });
 
-  it('must return a host list for one folder', function(done) {
+  it('must return the host list for the specified folder', function(done) {
     btsync.getFolderHosts({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -58,7 +59,7 @@ describe('getFolderHosts', function() {
     done();
   });
 
-  it('must return an empty list', function(done) {
+  it('must return an empty list if the specified folder is unknown', function(done) {
     btsync.getFolderHosts({
       secret: 'UNKNOWN'
     }, function(err, result) {

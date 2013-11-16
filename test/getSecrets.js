@@ -30,6 +30,7 @@ describe('getSecrets', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.getSecrets(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('getSecrets', function() {
     done();
   });
 
-  it('must return the secrets for one folder', function(done) {
+  it('must return the secrets for the specified folder', function(done) {
     btsync.getSecrets({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {

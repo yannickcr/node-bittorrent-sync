@@ -30,6 +30,7 @@ describe('getFolderPrefs', function() {
   it('must return an error if there is some missing parameters', function(done) {
     btsync.getFolderPrefs(function(err, result) {
       expect(err).to.be.instanceof(Error);
+      expect(err.message).to.match(/Specify all the required parameters/);
       expect(result).to.be.jsonSchema(errorSchema);
       return done();
     });
@@ -42,7 +43,7 @@ describe('getFolderPrefs', function() {
     done();
   });
 
-  it('must return the preferences for one folder', function(done) {
+  it('must return the preferences for the specified folder', function(done) {
     btsync.getFolderPrefs({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -59,7 +60,7 @@ describe('getFolderPrefs', function() {
     done();
   });
 
-  it('must return an empty object', function(done) {
+  it('must return an empty object if the specified folder is unknown', function(done) {
     btsync.getFolderPrefs({
       secret: 'UNKNOWN'
     }, function(err, result) {

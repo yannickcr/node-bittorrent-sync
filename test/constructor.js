@@ -73,7 +73,7 @@ describe('constructor', function() {
     it('must return an authorisation error', function(done) {
       btsync.getVersion(function(err, result) {
         expect(err).to.be.instanceof(Error);
-        expect(err).to.match(/Authorisation required/);
+        expect(err.message).to.match(/Authorisation required/);
         expect(result).to.equal(undefined);
         return done();
       });
@@ -97,7 +97,7 @@ describe('constructor', function() {
     it('must return a timeout error', function(done) {
       btsync.getVersion(function(err, result) {
         expect(err).to.be.instanceof(Error);
-        expect(err).to.match(/ETIMEDOUT/);
+        expect(err.message).to.match(/ETIMEDOUT/);
         expect(result).to.equal(undefined);
         return done();
       });
@@ -119,7 +119,7 @@ describe('constructor', function() {
     it('must return a parse error', function(done) {
       btsync.getVersion(function(err, result) {
         expect(err).to.be.instanceof(Error);
-        expect(err).to.match(/Unexpected token/);
+        expect(err.message).to.match(/Unexpected token/);
         expect(result).to.equal('Hello, I\'m invalid.');
         return done();
       });

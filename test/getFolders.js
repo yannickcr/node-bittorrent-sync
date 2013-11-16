@@ -26,7 +26,7 @@ describe('getFolders', function() {
     done();
   });
 
-  it('must return a folder list', function(done) {
+  it('must return the folder list', function(done) {
     btsync.getFolders(function(err, result) {
       expect(err).to.equal(null);
       expect(result).to.be.jsonSchema(getFoldersSchema);
@@ -41,7 +41,7 @@ describe('getFolders', function() {
     done();
   });
 
-  it('must return one folder', function(done) {
+  it('must return the specified folder', function(done) {
     btsync.getFolders({
       secret: 'ADB16DFRPFO7DHKOY56XQD83S55L5JBU2'
     }, function(err, result) {
@@ -58,7 +58,7 @@ describe('getFolders', function() {
     done();
   });
 
-  it('must return an empty list', function(done) {
+  it('must return an empty list if the specified folder is unknown', function(done) {
     btsync.getFolders({
       secret: 'UNKNOWN'
     }, function(err, result) {
