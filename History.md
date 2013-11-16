@@ -1,3 +1,8 @@
+0.0.3 / 2013-11-16
+==================
+ * add tests
+ * better error handling for add_folder
+
 0.0.2 / 2013-11-07
 ==================
  * fixes a bug making userOptions to be ignored ([#1][] @voz)

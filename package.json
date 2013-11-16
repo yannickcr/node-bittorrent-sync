@@ -1,6 +1,6 @@
 {
   "name": "bittorrent-sync",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple wrapper for the BitTorrent Sync API",
   "keywords": [
     "bittorrent",
