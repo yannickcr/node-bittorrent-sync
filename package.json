@@ -20,16 +20,16 @@
     }
   },
   "dependencies": {
-    "request": "~2.27.0"
+    "request": "~2.29.0"
   },
   "devDependencies": {
-    "mocha": "~1.14.0",
+    "mocha": "~1.15.1",
     "mocha-lcov-reporter": "~0.0.1",
     "blanket": "~1.1.5",
-    "coveralls": "~2.5.0",
-    "nock": "~0.23.0",
+    "coveralls": "~2.6.0",
+    "nock": "~0.25.0",
     "chai": "~1.8.1",
-    "chai-json-schema": "~1.0.5"
+    "chai-json-schema": "~1.0.10"
   },
   "engines": {
     "node": ">=0.8.0"
