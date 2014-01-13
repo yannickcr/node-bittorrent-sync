@@ -57,6 +57,24 @@ btsync.addFolder({
 
 Full API documentation can be found on the [BitTorrent Sync Website](http://www.bittorrent.com/intl/en/sync/developers/api)
 
+# Tests
+
+Run tests using mocha
+
+    $ npm test
+
+# Code Coverage
+
+Output a code coverage report in coverage.html
+
+    $ npm run coverage
+
+# Code Style
+
+Check the code style with JSCS
+
+    $ npm run checkstyle
+
 # License
 
 Node BitTorrent Sync is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).

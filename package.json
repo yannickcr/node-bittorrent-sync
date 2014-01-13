@@ -12,7 +12,9 @@
   "homepage": "https://github.com/yannickcr/node-bittorrent-sync",
   "main": "./lib/bittorrent-sync.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --reporter=spec",
+    "test": "node ./node_modules/mocha/bin/mocha test --reporter=spec",
+    "coverage": "node ./node_modules/mocha/bin/mocha test --require blanket --reporter=html-cov > coverage.html",
+    "checkstyle": "node ./node_modules/jscs/bin/jscs .",
     "blanket": {
       "pattern": [
         "/lib/bittorrent-sync.js"
@@ -29,7 +31,8 @@
     "coveralls": "~2.6.0",
     "nock": "~0.25.0",
     "chai": "~1.8.1",
-    "chai-json-schema": "~1.0.10"
+    "chai-json-schema": "~1.0.10",
+    "jscs": "~1.2.2"
   },
   "engines": {
     "node": ">=0.8.0"
