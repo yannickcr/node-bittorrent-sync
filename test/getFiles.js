@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('getFiles', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files')
       .replyWithFile(200, __dirname + '/mock/get_files-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('getFiles', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_files.json');
@@ -53,7 +53,7 @@ describe('getFiles', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files&secret=UNKNOWN')
       .reply(200, '[]');
@@ -70,7 +70,7 @@ describe('getFiles', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files&path=node_modules&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_files.json');
@@ -88,7 +88,7 @@ describe('getFiles', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_files&path=UNKNOWN&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .reply(200, '[]');
@@ -106,7 +106,7 @@ describe('getFiles', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('addFolder', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=add_folder')
       .replyWithFile(200, __dirname + '/mock/add_folder-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('addFolder', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=add_folder&dir=%2FiDoNotExist')
       .replyWithFile(200, __dirname + '/mock/add_folder-invalid-dir.json');
@@ -53,7 +53,7 @@ describe('addFolder', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=add_folder&dir=%2Froot')
       .replyWithFile(200, __dirname + '/mock/add_folder-no-permissions.json');
@@ -70,7 +70,7 @@ describe('addFolder', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=add_folder&secret=UNKNOWN&dir=%2FmyFiles')
       .replyWithFile(200, __dirname + '/mock/add_folder-invalid-secret.json');
@@ -88,7 +88,7 @@ describe('addFolder', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=add_folder&dir=%2FmyFiles')
       .replyWithFile(200, __dirname + '/mock/add_folder.json');
@@ -105,7 +105,7 @@ describe('addFolder', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

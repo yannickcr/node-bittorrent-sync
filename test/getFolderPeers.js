@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('getFolderPeers', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folder_peers')
       .replyWithFile(200, __dirname + '/mock/get_folder_peers-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('getFolderPeers', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folder_peers&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_folder_peers.json');
@@ -53,7 +53,7 @@ describe('getFolderPeers', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folder_peers&secret=UNKNOWN')
       .reply(200, '[]');
@@ -70,7 +70,7 @@ describe('getFolderPeers', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('getOs', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_os')
       .replyWithFile(200, __dirname + '/mock/get_os.json');
@@ -34,7 +34,7 @@ describe('getOs', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

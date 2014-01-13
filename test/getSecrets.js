@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('getSecrets', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_secrets')
       .replyWithFile(200, __dirname + '/mock/get_secrets-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('getSecrets', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_secrets&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_secrets.json');
@@ -53,7 +53,7 @@ describe('getSecrets', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_secrets&secret=UNKNOWN')
       .replyWithFile(200, __dirname + '/mock/get_secrets-invalid-secret.json');
@@ -70,7 +70,7 @@ describe('getSecrets', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

@@ -63,7 +63,7 @@ describe('constructor', function() {
       password: 'invalid'
     });
 
-    before(function (done) {
+    before(function(done) {
       nock('http://localhost:8888')
         .get('/api?method=get_version')
         .reply(401);
@@ -89,7 +89,7 @@ describe('constructor', function() {
       timeout: 1
     });
 
-    before(function (done) {
+    before(function(done) {
       nock.enableNetConnect('invalid');
       done();
     });
@@ -109,7 +109,7 @@ describe('constructor', function() {
 
     var btsync = new BtSync();
 
-    before(function (done) {
+    before(function(done) {
       nock('http://localhost:8888')
         .get('/api?method=get_version')
         .reply(200, 'Hello, I\'m invalid.');

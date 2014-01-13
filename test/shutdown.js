@@ -6,7 +6,7 @@ var
   chai           = require('chai'),
   expect         = chai.expect,
   chaiJSONSchema = require('chai-json-schema'),
-  shutdownSchema    = require(path.join(__dirname, 'schema/shutdown.js')),
+  shutdownSchema = require(path.join(__dirname, 'schema/shutdown.js')),
   BtSync         = require('../lib/bittorrent-sync')
 ;
 
@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('shutdown', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=shutdown')
       .replyWithFile(200, __dirname + '/mock/shutdown.json');
@@ -34,7 +34,7 @@ describe('shutdown', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

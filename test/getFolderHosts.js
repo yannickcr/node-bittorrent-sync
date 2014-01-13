@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('getFolderHosts', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folder_hosts')
       .replyWithFile(200, __dirname + '/mock/get_folder_hosts-missing-parameters.json');
@@ -35,7 +35,7 @@ describe('getFolderHosts', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folder_hosts&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_folder_hosts.json');
@@ -52,7 +52,7 @@ describe('getFolderHosts', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folder_hosts&secret=UNKNOWN')
       .reply(200, '{}');
@@ -69,7 +69,7 @@ describe('getFolderHosts', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

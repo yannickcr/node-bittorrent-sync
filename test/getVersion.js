@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('getVersion', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_version')
       .replyWithFile(200, __dirname + '/mock/get_version.json');
@@ -34,7 +34,7 @@ describe('getVersion', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

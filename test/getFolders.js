@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('getFolders', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folders')
       .replyWithFile(200, __dirname + '/mock/get_folders.json');
@@ -34,7 +34,7 @@ describe('getFolders', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folders&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_folders-secret.json');
@@ -51,7 +51,7 @@ describe('getFolders', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_folders&secret=UNKNOWN')
       .reply(200, '[]');
@@ -68,7 +68,7 @@ describe('getFolders', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

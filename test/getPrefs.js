@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('getPrefs', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=get_prefs')
       .replyWithFile(200, __dirname + '/mock/get_prefs.json');
@@ -34,7 +34,7 @@ describe('getPrefs', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

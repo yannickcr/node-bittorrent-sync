@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('setFolderHosts', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_folder_hosts')
       .replyWithFile(200, __dirname + '/mock/set_folder_hosts-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('setFolderHosts', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_folder_hosts&hosts=192.168.0.10%3A41610&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_folder_hosts.json');
@@ -54,7 +54,7 @@ describe('setFolderHosts', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_folder_hosts&hosts=192.168.0.10%3A41610&secret=UNKNOWN')
       .reply(200, '{}');
@@ -72,7 +72,7 @@ describe('setFolderHosts', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

@@ -19,7 +19,7 @@ nock.disableNetConnect();
 
 describe('setPrefs', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_prefs')
       .replyWithFile(200, __dirname + '/mock/get_prefs.json');
@@ -34,7 +34,7 @@ describe('setPrefs', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_prefs&device_name=TheNAS')
       .replyWithFile(200, __dirname + '/mock/get_prefs.json');
@@ -51,7 +51,7 @@ describe('setPrefs', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

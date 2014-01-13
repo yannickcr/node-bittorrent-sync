@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('removeFolder', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=remove_folder')
       .replyWithFile(200, __dirname + '/mock/remove_folder-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('removeFolder', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=remove_folder&secret=UNKNOWN')
       .replyWithFile(200, __dirname + '/mock/remove_folder-invalid-secret.json');
@@ -53,7 +53,7 @@ describe('removeFolder', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=remove_folder&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/remove_folder.json');
@@ -70,7 +70,7 @@ describe('removeFolder', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });

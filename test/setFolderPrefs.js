@@ -20,7 +20,7 @@ nock.disableNetConnect();
 
 describe('setFolderPrefs', function() {
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_folder_prefs')
       .replyWithFile(200, __dirname + '/mock/set_folder_prefs-missing-parameters.json');
@@ -36,7 +36,7 @@ describe('setFolderPrefs', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_folder_prefs&secret=ADB16DFRPFO7DHKOY56XQD83S55L5JBU2')
       .replyWithFile(200, __dirname + '/mock/get_folder_prefs.json');
@@ -53,7 +53,7 @@ describe('setFolderPrefs', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get('/api?method=set_folder_prefs&secret=UNKNOWN')
       .reply(200, '{}');
@@ -70,7 +70,7 @@ describe('setFolderPrefs', function() {
     });
   });
 
-  before(function (done) {
+  before(function(done) {
     nock('http://localhost:8888')
       .get(
         '/api?method=set_folder_prefs&use_tracker=0&use_sync_trash=0&use_relay_server=0&use_hosts=0' +
@@ -97,7 +97,7 @@ describe('setFolderPrefs', function() {
     });
   });
 
-  after(function (done) {
+  after(function(done) {
     nock.cleanAll();
     done();
   });
