@@ -1,7 +1,7 @@
 Node BitTorrent Sync
 ====================
 
-[![NPM version](https://badge.fury.io/js/bittorrent-sync.png)](https://npmjs.org/package/bittorrent-sync) [![Build Status](https://secure.travis-ci.org/yannickcr/node-bittorrent-sync.png)](http://travis-ci.org/yannickcr/node-bittorrent-sync) [![Dependency Status](https://gemnasium.com/yannickcr/node-bittorrent-sync.png)](https://gemnasium.com/yannickcr/node-bittorrent-sync) [![Coverage Status](https://coveralls.io/repos/yannickcr/node-bittorrent-sync/badge.png?branch=master)](https://coveralls.io/r/yannickcr/node-bittorrent-sync?branch=master) [![Code Climate](https://codeclimate.com/github/yannickcr/node-bittorrent-sync.png)](https://codeclimate.com/github/yannickcr/node-bittorrent-sync)
+[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url] [![Coverage Status][coverage-image]][coverage-url] [![Code Climate][climate-image]][climate-url]
 
 A simple wrapper for the [BitTorrent Sync API](http://www.bittorrent.com/intl/en/sync/developers/api).
 
@@ -79,4 +79,20 @@ Check the code style with JSCS
 
 Node BitTorrent Sync is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yannickcr/node-bittorrent-sync/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[npm-url]: https://npmjs.org/package/bittorrent-sync
+[npm-image]: http://img.shields.io/npm/v/bittorrent-sync.svg?style=flat
+
+[travis-url]: https://travis-ci.org/yannickcr/node-bittorrent-sync
+[travis-image]: http://img.shields.io/travis/yannickcr/node-bittorrent-sync/master.svg?style=flat
+
+[deps-url]: https://gemnasium.com/yannickcr/node-bittorrent-sync
+[deps-image]: http://img.shields.io/gemnasium/yannickcr/node-bittorrent-sync.svg?style=flat
+
+[coverage-url]: https://coveralls.io/r/yannickcr/node-bittorrent-sync?branch=master
+[coverage-image]: http://img.shields.io/coveralls/yannickcr/node-bittorrent-sync/master.svg?style=flat
+
+[climate-url]: https://codeclimate.com/github/yannickcr/node-bittorrent-sync
+[climate-image]: http://img.shields.io/codeclimate/github/yannickcr/node-bittorrent-sync.svg?style=flat
+
+[status-url]: https://github.com/yannickcr/node-bittorrent-sync/pulse
+[status-image]: http://img.shields.io/badge/status-maintained-brightgreen.svg?style=flat

@@ -14,7 +14,9 @@
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha test --reporter=spec",
     "coverage": "node ./node_modules/mocha/bin/mocha test --require blanket --reporter=html-cov > coverage.html",
-    "checkstyle": "node ./node_modules/jscs/bin/jscs .",
+    "checkstyle": "node ./node_modules/jscs/bin/jscs ."
+  },
+  "config": {
     "blanket": {
       "pattern": [
         "/lib/bittorrent-sync.js"
@@ -22,17 +24,17 @@
     }
   },
   "dependencies": {
-    "request": "~2.31.0"
+    "request": "~2.36.0"
   },
   "devDependencies": {
-    "mocha": "~1.17.0",
+    "mocha": "~1.20.1",
     "mocha-lcov-reporter": "~0.0.1",
     "blanket": "~1.1.5",
-    "coveralls": "~2.6.0",
-    "nock": "~0.27.1",
-    "chai": "~1.8.1",
-    "chai-json-schema": "~1.0.10",
-    "jscs": "~1.2.2"
+    "coveralls": "~2.10.0",
+    "nock": "~0.34.1",
+    "chai": "~1.9.1",
+    "chai-json-schema": "~1.1.0",
+    "jscs": "~1.4.5"
   },
   "engines": {
     "node": ">=0.8.0"
